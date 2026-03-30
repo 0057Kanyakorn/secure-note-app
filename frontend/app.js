@@ -1,5 +1,5 @@
 // --- Configuration ---
-const API_URL = 'http://localhost:3000/api/notes';
+const API_URL = 'https://secure-note-app-2wuy.onrender.com/api/notes';
 const SECRET_TOKEN = 'my_super_secret_token_123'; // เปลี่ยนให้ตรงกับใน .env ของคุณ
 
 let notes = [];
