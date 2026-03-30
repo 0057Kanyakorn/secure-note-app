@@ -1,24 +1,36 @@
-# SecureNote Application 📝
-
-SecureNote เป็นแอปพลิเคชัน Full-Stack สำหรับการจดบันทึก (สร้าง, อ่าน, ลบ โน้ต) ที่เน้นความเข้าใจในสถาปัตยกรรม Client-Server, การทำงานของ JavaScript Runtime (Node.js & Browser), และความปลอดภัยในการจัดการ Environment Variables
-
-โปรเจกต์นี้เป็นส่วนหนึ่งของวิชา Web Development Fundamentals & Architecture
-
-## 🛠️ เทคโนโลยีที่ใช้
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript (DOM Manipulation, Fetch API)
-- **Backend:** Node.js, Express.js
-- **ความปลอดภัย:** จัดการข้อมูลความลับด้วยไฟล์ `.env`
+# 🔐 SecureNote Application
+**SecureNote** คือเว็บแอปพลิเคชันจดบันทึกแบบ Full-Stack ที่ออกแบบมาเพื่อศึกษาโครงสร้างสถาปัตยกรรมเว็บสมัยใหม่ การจัดการข้อมูลผ่าน Cloud API และการรักษาความปลอดภัยของข้อมูลผ่าน Environment Variables
 
 ---
 
-## 🚀 วิธีการติดตั้งและรันโปรเจกต์ (Installation & Setup)
+## 🔗 ลิงก์สำหรับการเข้าใช้งาน (Live Demo)
+* **🌐 Frontend:** [https://secure-note-frontend-09pj.onrender.com](https://secure-note-frontend-09pj.onrender.com)
+* **⚙️ Backend API:** [https://secure-note-app-2wuy.onrender.com](https://secure-note-app-2wuy.onrender.com)
 
-โปรเจกต์นี้แยกส่วนการทำงานระหว่าง Frontend และ Backend อย่างชัดเจน กรุณาทำตามขั้นตอนด้านล่างเพื่อรันแอปพลิเคชัน
+---
 
-### สิ่งที่ต้องมี (Prerequisites)
-- ต้องมีการติดตั้ง **Node.js** ในเครื่องคอมพิวเตอร์ของคุณ
+## 🚀 ฟีเจอร์หลัก (Key Features)
+* **Full CRUD Operations:** สามารถสร้าง, อ่าน, แก้ไข และลบโน้ตได้จริงผ่านอินเทอร์เฟซที่ใช้งานง่าย
+* **Data Persistence:** ระบบจัดเก็บข้อมูลถาวรบน Cloud ด้วย **PocketHost API** ข้อมูลไม่หายเมื่อรีเฟรชหน้าเว็บ
+* **Loading State:** มีการแสดงสถานะการโหลด (⏳ Loading...) เพื่อแจ้งให้ผู้ใช้ทราบขณะระบบประมวลผล
+* **Cloud Native & Security:** Deploy บนระบบ **Render** พร้อมรองรับโปรโตคอล **HTTPS** เพื่อความปลอดภัย
 
-### ขั้นตอนที่ 1: การตั้งค่า Backend
-1. เปิด Terminal แล้วเข้าไปที่โฟลเดอร์ `backend`:
-   ```bash
-   cd backend
+---
+
+## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (DOM Manipulation)
+* **Backend:** Node.js, Express.js
+* **Database:** PocketHost (PocketBase Cloud)
+* **Environment:** Dotenv (สำหรับการจัดการความปลอดภัย)
+
+---
+
+## 💻 การติดตั้งและรันโปรเจกต์ในเครื่อง (Local Setup)
+
+### 1. ส่วนของ Backend
+1. เข้าไปที่โฟลเดอร์ `backend`: `cd backend`
+2. ติดตั้ง Dependencies: `npm install`
+3. สร้างไฟล์ `.env` และกำหนดค่าดังนี้:
+   ```env
+   PORT=3000
+   SECRET_TOKEN=66010057_token
